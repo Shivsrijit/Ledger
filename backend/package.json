@@ -1,0 +1,41 @@
+{
+  "name": "finance-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Finance data processing and RBAC backend with Express + Supabase Postgres",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "db:schema": "node scripts/apply-schema.js",
+    "db:seed": "node scripts/apply-seed.js",
+    "db:migrate": "node scripts/apply-migration.js",
+    "test": "jest",
+    "lint": "echo \"No linter configured\""
+  },
+  "keywords": [
+    "express",
+    "supabase",
+    "postgres",
+    "jwt",
+    "rbac"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.3.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.20.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  }
+}
