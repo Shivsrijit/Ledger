@@ -1,6 +1,10 @@
 # Finance Data Processing and Access Control Backend
 
-Complete backend using:
+#### Live Application Link : https://ledger-blush-sigma.vercel.app/
+#### Deployed Backend URL : https://ledger-u9p6.onrender.com/
+
+
+#### Complete backend using:
 - Node.js + Express
 - Supabase PostgreSQL
 - JWT Authentication
