@@ -40,10 +40,13 @@ export default function Login() {
   return (
     <div className="app-shell" style={{ justifyContent: "center", padding: "2rem 1.25rem" }}>
       <div style={{ width: "100%", maxWidth: 400, margin: "0 auto" }}>
-        <p style={{ fontWeight: 700, fontSize: "1.25rem", letterSpacing: "-0.02em", margin: "0 0 0.25rem" }}>Ledger</p>
+        <p style={{ fontWeight: 700, fontSize: "1.25rem", letterSpacing: "-0.02em", margin: "0 0 0.25rem" }}>
+          Ledger
+        </p>
         <p className="page-sub" style={{ marginBottom: "1.5rem" }}>
           Sign in to your workspace.
         </p>
+
         <div className="card">
           <form onSubmit={onSubmit}>
             {flash ? (
@@ -60,11 +63,21 @@ export default function Login() {
                 {flash}
               </div>
             ) : null}
+
             {error ? <div className="alert-error">{error}</div> : null}
+
             <div className="form-group">
               <label htmlFor="em">Email</label>
-              <input id="em" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input
+                id="em"
+                type="email"
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
+
             <PasswordField
               id="pw"
               label="Password"
@@ -73,12 +86,46 @@ export default function Login() {
               autoComplete="current-password"
               required
             />
-            <button type="submit" className="btn btn-primary" style={{ width: "100%" }} disabled={loading}>
+
+            <button
+              type="submit"
+              className="btn btn-primary"
+              style={{ width: "100%" }}
+              disabled={loading}
+            >
               {loading ? "Signing in…" : "Sign in"}
             </button>
           </form>
+
+          {/* ✅ Demo Credentials Section */}
+          <div
+            style={{
+              marginTop: "1rem",
+              paddingTop: "0.75rem",
+              borderTop: "1px solid var(--border)",
+              fontSize: "0.75rem",
+              color: "var(--text-muted)",
+              lineHeight: 1.5
+            }}
+          >
+            <div style={{ fontWeight: 600, marginBottom: "0.25rem" }}>
+              Demo Credentials
+            </div>
+            <div>Admin (Primary): testadmin@ledger.com / Testadmin@123</div>
+            <div>Admin: testadmin2@ledger.com / Testadmin@1234</div>
+            <div>Analyst: testanalyst@ledger.com / TestAnalyst@123</div>
+            <div>Viewer: testviewer@ledger.com / Testviewer@123</div>
+          </div>
         </div>
-        <p style={{ textAlign: "center", marginTop: "1.25rem", fontSize: "0.9375rem", color: "var(--text-muted)" }}>
+
+        <p
+          style={{
+            textAlign: "center",
+            marginTop: "1.25rem",
+            fontSize: "0.9375rem",
+            color: "var(--text-muted)"
+          }}
+        >
           First time? <Link to="/register">Create the admin account</Link>
         </p>
       </div>
